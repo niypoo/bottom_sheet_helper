@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:unicons/unicons.dart';
+
+class DraggableButton extends StatelessWidget {
+  const DraggableButton({
+    Key? key,
+    this.icon,
+    this.color,
+    this.iconColor,
+  }) : super(key: key);
+
+  final IconData? icon;
+  final Color? color;
+  final Color? iconColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
+      onTap: Get.back,
+      child: Container(
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: color ?? Get.theme.scaffoldBackgroundColor,
+        ),
+        height: 60,
+        width: 60,
+        child: Icon(
+          icon ?? UniconsLine.angle_down,
+          color: iconColor ?? Get.theme.iconTheme.color,
+          size: 30,
+        ),
+      ),
+    );
+  }
+}
