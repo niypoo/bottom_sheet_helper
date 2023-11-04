@@ -46,11 +46,17 @@ class ActionSheetHelper {
                           leading: o.leading,
                           title: Text(
                             o.title,
-                            style: Get.textTheme.bodyLarge,
+                            style: Get.textTheme.bodyMedium!.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                            maxLines: 1,
                           ),
                           subtitle: Text(
                             o.subtitle ?? ' ',
-                            style: Get.textTheme.caption,
+                            style: Get.textTheme.bodySmall!.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                            maxLines: 1,
                           ),
                           onTap: () => Get.back(result: o.value),
                           trailing:
