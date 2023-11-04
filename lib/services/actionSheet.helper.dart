@@ -43,7 +43,11 @@ class ActionSheetHelper {
                           contentPadding: EdgeInsets.symmetric(
                             vertical: AppConfigService.to.space!.xs,
                           ),
-                          leading: o.leading,
+                          leading: SizedBox(
+                            height: 60,
+                            width: 60,
+                            child: o.leading,
+                          ),
                           title: Text(
                             o.title,
                             style: Get.textTheme.bodyMedium!.copyWith(
