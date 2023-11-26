@@ -2,6 +2,7 @@ import 'package:app_configuration_service/appInfo.config.dart';
 import 'package:bottom_sheet_helper/models/actionSheetOption.model.dart';
 import 'package:bottom_sheet_helper/services/customBottomSheet.helper.dart';
 import 'package:flutter/material.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:get/get.dart';
 import 'package:unicons/unicons.dart';
 
@@ -38,33 +39,33 @@ class ActionSheetHelper {
                     context: Get.context,
                     color: Get.theme.iconTheme.color!.withOpacity(0.1),
                     tiles: options.map(
-                      (o) {
+                      (option) {
                         return ListTile(
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: AppConfigService.to.space!.xs,
-                          ),
+                          contentPadding: const EdgeInsets.all(0),
                           leading: SizedBox(
-                            height: 60,
-                            width: 60,
-                            child: o.leading,
+                            height: 14.sp,
+                            width: 14.sp,
+                            child: option.leading,
                           ),
                           title: Text(
-                            o.title,
-                            style: Get.textTheme.bodyMedium!.copyWith(
+                            option.title,
+                            style: Get.textTheme.labelMedium!.copyWith(
                               fontWeight: FontWeight.bold,
+                              fontSize: 11.sp,
                             ),
                             maxLines: 1,
                           ),
                           subtitle: Text(
-                            o.subtitle ?? ' ',
+                            option.subtitle ?? ' ',
                             style: Get.textTheme.bodySmall!.copyWith(
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 9.sp,
                             ),
-                            maxLines: 1,
+                            maxLines: 2,
                           ),
-                          onTap: () => Get.back(result: o.value),
+                          onTap: () => Get.back(result: option.value),
                           trailing:
-                              currentValue.toString() == o.value.toString()
+                              currentValue.toString() == option.value.toString()
                                   ? Icon(
                                       UniconsLine.check,
                                       color: Get.theme.primaryColor,
