@@ -31,7 +31,6 @@ class ActionSheetHelper {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-
                   // BODY
                   ...ListTile.divideTiles(
                     context: Get.context,
@@ -41,19 +40,22 @@ class ActionSheetHelper {
                         return ListTile(
                           contentPadding: const EdgeInsets.all(0),
                           leading: option.leading,
-                          title: Text(
-                            option.title,
-                            style: Get.textTheme.labelMedium!.copyWith(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 9.sp,
+                          title: Align(
+                            alignment: const Alignment(-1.2, 0),
+                            child: Text(
+                              option.title,
+                              style: Get.textTheme.labelMedium!.copyWith(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 11.sp,
+                              ),
+                              maxLines: 1,
                             ),
-                            maxLines: 1,
                           ),
                           subtitle: Text(
                             option.subtitle ?? ' ',
                             style: Get.textTheme.bodySmall!.copyWith(
                               fontWeight: FontWeight.w300,
-                              fontSize: 9.sp,
+                              fontSize: 10.sp,
                             ),
                             maxLines: 2,
                           ),
