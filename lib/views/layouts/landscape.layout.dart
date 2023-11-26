@@ -53,7 +53,6 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
             children: [
               Expanded(
                 child: SingleChildScrollView(
-                  // padding: const EdgeInsets.symmetric(vertical: Config.smMergin),
                   child: Column(
                     children: [
                       // HEADER
@@ -71,7 +70,6 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
 
               Expanded(
                 child: SingleChildScrollView(
-                  // padding: const EdgeInsets.symmetric(vertical: Config.sm Margin),
                   child: Column(
                     children: [child!],
                   ),
