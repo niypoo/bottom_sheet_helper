@@ -33,15 +33,25 @@ class ActionSheetHelper {
                   (option) {
                     return FlyTableRow(
                       onTap: () => Get.back(result: option.value),
-                      children: [
-                        if (option.leading != null) option.leading!,
-                        Text(
-                          option.title,
-                          style: Get.textTheme.labelMedium!.copyWith(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 10.sp,
+                      bottomHint: Text(
+                          option.subtitle ?? ' ',
+                          style: Get.textTheme.bodySmall!.copyWith(
+                            fontWeight: FontWeight.w300,
+                            fontSize: 9.sp,
                           ),
                           maxLines: 2,
+                        ),
+                      children: [
+                        if (option.leading != null) option.leading!,
+                        Flexible(
+                          child: Text(
+                            option.title,
+                            style: Get.textTheme.labelMedium!.copyWith(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 10.sp,
+                            ),
+                            maxLines: 2,
+                          ),
                         ),
                         if (currentValue.toString() == option.value.toString())
                           Icon(
