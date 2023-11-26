@@ -28,28 +28,25 @@ class ActionSheetHelper {
             )
           : SingleChildScrollView(
               child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  // BODY
-                  ...ListTile.divideTiles(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: ListTile.divideTiles(
                     context: Get.context,
                     color: Get.theme.iconTheme.color!.withOpacity(0.1),
                     tiles: options.map(
                       (option) {
                         return ListTile(
+                          horizontalTitleGap: 10.0,
+                          minLeadingWidth: 10.0,
                           contentPadding: const EdgeInsets.all(0),
                           leading: option.leading,
-                          title: Align(
-                            alignment: const Alignment(-1.2, 0),
-                            child: Text(
-                              option.title,
-                              style: Get.textTheme.labelMedium!.copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 11.sp,
-                              ),
-                              maxLines: 1,
+                          title: Text(
+                            option.title,
+                            style: Get.textTheme.labelMedium!.copyWith(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 11.sp,
                             ),
+                            maxLines: 1,
                           ),
                           subtitle: Text(
                             option.subtitle ?? ' ',
@@ -70,9 +67,7 @@ class ActionSheetHelper {
                         );
                       },
                     ).toList(),
-                  ).toList()
-                ],
-              ),
+                  ).toList()),
             ),
       color: color,
       height: height,
