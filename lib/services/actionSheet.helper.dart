@@ -28,8 +28,6 @@ class ActionSheetHelper {
             )
           : SingleChildScrollView(
               child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: ListTile.divideTiles(
                     context: Get.context,
                     color: Get.theme.iconTheme.color!.withOpacity(0.1),
@@ -43,16 +41,16 @@ class ActionSheetHelper {
                           title: Text(
                             option.title,
                             style: Get.textTheme.labelMedium!.copyWith(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 10.sp,
                             ),
-                            maxLines: 1,
+                            maxLines: 2,
                           ),
                           subtitle: Text(
                             option.subtitle ?? ' ',
                             style: Get.textTheme.bodySmall!.copyWith(
                               fontWeight: FontWeight.w300,
-                              fontSize: 10.sp,
+                              fontSize: 9.sp,
                             ),
                             maxLines: 2,
                           ),
