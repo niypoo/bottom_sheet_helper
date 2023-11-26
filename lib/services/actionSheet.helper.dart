@@ -1,4 +1,3 @@
-import 'package:app_configuration_service/appInfo.config.dart';
 import 'package:bottom_sheet_helper/models/actionSheetOption.model.dart';
 import 'package:bottom_sheet_helper/services/customBottomSheet.helper.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +31,6 @@ class ActionSheetHelper {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SizedBox(height: AppConfigService.to.space!.m),
 
                   // BODY
                   ...ListTile.divideTiles(
@@ -42,16 +40,12 @@ class ActionSheetHelper {
                       (option) {
                         return ListTile(
                           contentPadding: const EdgeInsets.all(0),
-                          leading: SizedBox(
-                            height: 14.sp,
-                            width: 14.sp,
-                            child: option.leading,
-                          ),
+                          leading: option.leading,
                           title: Text(
                             option.title,
                             style: Get.textTheme.labelMedium!.copyWith(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 9.sp,
                             ),
                             maxLines: 1,
                           ),
