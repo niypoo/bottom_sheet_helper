@@ -42,7 +42,10 @@ class ActionSheetHelper {
                           maxLines: 2,
                         ),
                       children: [
-                        if (option.leading != null) option.leading!,
+                        if (option.leading != null) Padding(
+                          padding: const EdgeInsetsDirectional.only(end: 10),
+                          child: option.leading!,
+                        ),
                         Flexible(
                           child: Text(
                             option.title,
