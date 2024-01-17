@@ -1,6 +1,7 @@
 import 'package:app_configuration_service/appInfo.config.dart';
 import 'package:bottom_sheet_helper/views/widgets/header.widget.dart';
 import 'package:flutter/material.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:get/get.dart';
 import 'package:bottom_sheet_helper/views/widgets/draggableButton.widget.dart';
 
@@ -37,9 +38,7 @@ class BottomSheetPortraitLayout extends StatelessWidget {
           // Body Of Sheet
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                AppConfigService.to.radius,
-              ),
+              borderRadius: BorderRadius.circular(15.sp),
               color: color ?? Get.theme.scaffoldBackgroundColor,
             ),
             padding: EdgeInsets.only(

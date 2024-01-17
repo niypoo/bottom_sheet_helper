@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:app_configuration_service/appInfo.config.dart';
 import 'package:bottom_sheet_helper/services/customBottomSheet.helper.dart';
 import 'package:flutter/material.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:fly_ui/views/widgets/buttons/elevatedButton.widget.dart';
 import 'package:get/get.dart';
 import 'package:unicons/unicons.dart';
@@ -77,7 +78,7 @@ class TextFieldAdvanceBottomSheet extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(AppConfigService.to.space!.xs),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppConfigService.to.radius),
+        borderRadius: BorderRadius.circular(15.sp),
         border: Border.all(
           color: Get.theme.cardColor,
         ),
