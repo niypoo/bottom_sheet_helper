@@ -42,13 +42,11 @@ class CustomBottomSheetHelper {
               height: height,
               child: child,
             ),
-      backgroundColor: Colors.transparent,
       elevation: elevation,
       enableDrag: draggable,
       isDismissible: isDismissible,
       useRootNavigator: true,
       isScrollControlled: true,
-      // barrierColor: Colors.black12,
     );
   }
 }
