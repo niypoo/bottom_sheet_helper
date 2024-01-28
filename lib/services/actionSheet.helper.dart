@@ -31,6 +31,7 @@ class ActionSheetHelper {
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (c, i) {
                 return ListTile(
+                  minVerticalPadding: 0,
                   contentPadding: EdgeInsets.symmetric(horizontal: 5.sp),
                   onTap: () => Get.back(result: options[i].value),
                   leading: options[i].leading,
@@ -62,6 +63,7 @@ class ActionSheetHelper {
               separatorBuilder: (c, i) => i == options.length
                   ? const SizedBox.shrink()
                   : Divider(
+                      height: 0,
                       indent: 10.sp,
                       endIndent: 10.sp,
                       color: Get.theme.cardColor,
