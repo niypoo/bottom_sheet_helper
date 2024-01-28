@@ -27,6 +27,8 @@ class ActionSheetHelper {
               ),
             )
           : ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (c, i) {
                 return ListTile(
                   contentPadding: EdgeInsets.all(5.sp),
