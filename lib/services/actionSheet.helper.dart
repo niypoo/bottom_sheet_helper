@@ -31,37 +31,33 @@ class ActionSheetHelper {
               child: Column(
                 children: options.map(
                   (option) {
-                    return FlyTableRow(
+                    return ListTile(
+                      contentPadding: EdgeInsets.all(5.sp),
                       onTap: () => Get.back(result: option.value),
-                      bottomHint: Text(
-                          option.subtitle ?? ' ',
-                          style: Get.textTheme.bodySmall!.copyWith(
-                            fontWeight: FontWeight.w300,
-                            fontSize: 9.sp,
-                          ),
-                          maxLines: 2,
+                      leading: option.leading,
+                      title: Text(
+                        option.title,
+                        style: Get.textTheme.labelMedium!.copyWith(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 10.sp,
                         ),
-                      children: [
-                        if (option.leading != null) Padding(
-                          padding: const EdgeInsetsDirectional.only(end: 10),
-                          child: option.leading!,
+                        maxLines: 2,
+                      ),
+                      subtitle: Text(
+                        option.subtitle ?? ' ',
+                        style: Get.textTheme.bodySmall!.copyWith(
+                          fontWeight: FontWeight.w300,
+                          fontSize: 9.sp,
                         ),
-                        Flexible(
-                          child: Text(
-                            option.title,
-                            style: Get.textTheme.labelMedium!.copyWith(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 10.sp,
-                            ),
-                            maxLines: 2,
-                          ),
-                        ),
-                        if (currentValue.toString() == option.value.toString())
-                          Icon(
-                            UniconsLine.check,
-                            color: Get.theme.primaryColor,
-                          )
-                      ],
+                        maxLines: 2,
+                      ),
+                      trailing:
+                          currentValue.toString() == option.value.toString()
+                              ? Icon(
+                                  UniconsLine.check,
+                                  color: Get.theme.primaryColor,
+                                )
+                              : null,
                     );
                   },
                 ).toList(),
