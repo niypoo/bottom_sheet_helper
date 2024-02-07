@@ -63,7 +63,7 @@ class ActionSheetHelper {
               separatorBuilder: (c, i) => i == options.length
                   ? const SizedBox.shrink()
                   : Divider(
-                      height: 0,
+                      height: 10.sp,
                       indent: 10.sp,
                       endIndent: 10.sp,
                       color: Get.theme.cardColor,
