@@ -34,13 +34,7 @@ class ActionSheetHelper {
                   minVerticalPadding: 0,
                   contentPadding: EdgeInsets.symmetric(horizontal: 5.sp),
                   onTap: () => Get.back(result: options[i].value),
-                  leading: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      if (options[i].leading != null) options[i].leading!,
-                    ],
-                  ),
+                  leading: options[i].leading,
                   title: Text(
                     options[i].title,
                     style: Get.textTheme.labelMedium!.copyWith(
