@@ -35,8 +35,8 @@ class ActionSheetHelper {
                   contentPadding: EdgeInsets.symmetric(horizontal: 5.sp),
                   onTap: () => Get.back(result: options[i].value),
                   leading: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       if (options[i].leading != null) options[i].leading!,
                     ],
