@@ -34,12 +34,18 @@ class ActionSheetHelper {
                   minVerticalPadding: 0,
                   contentPadding: EdgeInsets.symmetric(horizontal: 5.sp),
                   onTap: () => Get.back(result: options[i].value),
-                  leading: options[i].leading,
+                  leading: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      if (options[i].leading != null) options[i].leading!,
+                    ],
+                  ),
                   title: Text(
                     options[i].title,
                     style: Get.textTheme.labelMedium!.copyWith(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 10.sp,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 12.sp,
                     ),
                     maxLines: 2,
                   ),
@@ -47,7 +53,7 @@ class ActionSheetHelper {
                     options[i].subtitle ?? ' ',
                     style: Get.textTheme.bodySmall!.copyWith(
                       fontWeight: FontWeight.w300,
-                      fontSize: 9.sp,
+                      fontSize: 10.sp,
                     ),
                     maxLines: 2,
                   ),
