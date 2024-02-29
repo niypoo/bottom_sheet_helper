@@ -1,4 +1,3 @@
-import 'package:app_configuration_service/appInfo.config.dart';
 import 'package:bottom_sheet_helper/views/widgets/draggableButton.widget.dart';
 import 'package:bottom_sheet_helper/views/widgets/header.widget.dart';
 import 'package:flutter/material.dart';
@@ -41,9 +40,9 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
             color: color ?? Get.theme.scaffoldBackgroundColor,
           ),
           padding: EdgeInsets.only(
-            top: AppConfigService.to.space!.l,
-            right: AppConfigService.to.space!.l,
-            left: AppConfigService.to.space!.l,
+            top: 10.sp,
+            right: 10.sp,
+            left: 10.sp,
           ),
           width: Get.width * 0.6,
           height: Get.height * 0.6,
@@ -83,7 +82,7 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
         // Draggable Button
         if (draggable!)
           Positioned(
-            left: 0,
+            left: -10.sp,
             top: Get.height * 0.08,
             child: DraggableButton(
               icon: icon,
@@ -105,9 +104,7 @@ class BottomSheetDividerLandscapeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: context.isTablet
-            ? (context.height * 0.06)
-            : AppConfigService.to.space!.m,
+        width: context.isTablet ? (context.height * 0.06) : 10.sp,
         height: context.height * 0.7,
         child: VerticalDivider(color: Get.theme.cardColor),
       ),

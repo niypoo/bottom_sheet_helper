@@ -1,4 +1,3 @@
-import 'package:app_configuration_service/appInfo.config.dart';
 import 'package:bottom_sheet_helper/views/widgets/header.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fly_ui/extensions/responsive.extension.dart';
@@ -42,10 +41,10 @@ class BottomSheetPortraitLayout extends StatelessWidget {
               color: color ?? Get.theme.scaffoldBackgroundColor,
             ),
             padding: EdgeInsets.only(
-              top: AppConfigService.to.space!.l,
-              right: AppConfigService.to.space!.l,
-              left: AppConfigService.to.space!.l,
-              bottom: AppConfigService.to.space!.s,
+              top: 10.sp,
+              right: 10.sp,
+              left: 10.sp,
+              bottom: 5.sp,
             ),
             width: context.width * 0.97,
             margin: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
@@ -62,7 +61,7 @@ class BottomSheetPortraitLayout extends StatelessWidget {
                 Flexible(
                   child: Padding(
                     padding: EdgeInsets.only(
-                      bottom: AppConfigService.to.space!.s,
+                      bottom: 5.sp,
                     ),
                     child: child,
                   ),
