@@ -48,8 +48,8 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
           height: Get.height * 0.6,
           margin: EdgeInsets.only(
             bottom: 15.sp,
-            left: Get.width * 0.1,
-            right: Get.width * 0.1,
+            left: 8.sp,
+            right: 8.sp,
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
