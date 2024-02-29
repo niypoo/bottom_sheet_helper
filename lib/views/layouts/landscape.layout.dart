@@ -41,8 +41,8 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
           ),
           padding: EdgeInsets.only(
             top: 10.sp,
-            right: 10.sp,
-            left: 10.sp,
+            right: 15.sp,
+            left: 15.sp,
           ),
           width: Get.width * 0.6,
           height: Get.height * 0.6,
