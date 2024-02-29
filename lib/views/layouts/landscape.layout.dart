@@ -52,8 +52,8 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
             right: 15.sp,
           ),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
                 child: SingleChildScrollView(
