@@ -46,7 +46,11 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
           ),
           width: Get.width * 0.6,
           height: Get.height * 0.6,
-          margin: EdgeInsets.only(bottom: (Get.height * 0.06)),
+          margin: EdgeInsets.only(
+            bottom: 15.sp,
+            left: Get.width * 0.1,
+            right: Get.width * 0.1,
+          ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -82,7 +86,7 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
         // Draggable Button
         if (draggable!)
           Positioned(
-            left: -10.sp,
+            left: 0,
             top: Get.height * 0.08,
             child: DraggableButton(
               icon: icon,
