@@ -44,12 +44,12 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
             right: 15.sp,
             left: 15.sp,
           ),
-          width: Get.width * 0.6,
-          height: Get.height * 0.6,
+          width: Get.width * 0.65,
+          height: Get.height * 0.65,
           margin: EdgeInsets.only(
             bottom: 15.sp,
-            left: 15.sp,
-            right: 15.sp,
+            left: 18.sp,
+            right: 18.sp,
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
