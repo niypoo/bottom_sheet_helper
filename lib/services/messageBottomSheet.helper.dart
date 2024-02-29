@@ -7,9 +7,9 @@ import 'package:unicons/unicons.dart';
 class MessageBottomSheetHelper {
   static Future<dynamic> show({
     required String title,
+    required String body,
     String? subTitle,
     double? height,
-    String? body,
     Color? color,
     IconData icon = UniconsLine.exclamation_triangle,
   }) async {
@@ -27,14 +27,7 @@ class MessageBottomSheetHelper {
           )
         ],
       ),
-      child: body == null
-          ? null
-          : SingleChildScrollView(
-              // padding: const EdgeInsets.symmetric(vertical: Config.sm Margin),
-              child: Column(
-                children: [Text(body)],
-              ),
-            ),
+      child: Text(body),
       color: color,
     );
   }
