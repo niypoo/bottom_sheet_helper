@@ -26,7 +26,6 @@ class ConformationSheetHelper {
               FlyElevatedButton.primary(
                 title: yesTitle ?? 'Yes'.tr,
                 onPressed: () => Get.back(result: true),
-                margin: EdgeInsets.only(bottom: AppConfigService.to.space!.s),
               ),
               FlyElevatedButton.close(
                 title: noTitle ?? 'No'.tr,
