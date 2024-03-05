@@ -31,6 +31,7 @@ class ActionSheetHelper {
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (c, i) {
                 return ListTile(
+                  dense:true,
                   minVerticalPadding: 0,
                   contentPadding: EdgeInsets.symmetric(horizontal: 5.sp),
                   onTap: () => Get.back(result: options[i].value),
