@@ -57,6 +57,7 @@ class ActionSheetHelper {
                           ? Icon(
                               UniconsLine.check,
                               color: Get.theme.primaryColor,
+                              size: 22.sp,
                             )
                           : null,
                 );
