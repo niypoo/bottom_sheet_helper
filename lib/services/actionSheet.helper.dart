@@ -44,7 +44,7 @@ class ActionSheetHelper {
                     ),
                     maxLines: 2,
                   ),
-                  subtitle: options[i].subtitle == null
+                  subtitle: options[i].subtitle != null
                       ? Text(
                           options[i].subtitle ?? ' ',
                           style: Get.textTheme.bodySmall!.copyWith(
