@@ -31,7 +31,7 @@ class ActionSheetHelper {
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (c, i) {
                 return ListTile(
-                  dense:true,
+                  dense: true,
                   minVerticalPadding: 0,
                   contentPadding: EdgeInsets.symmetric(horizontal: 5.sp),
                   onTap: () => Get.back(result: options[i].value),
@@ -44,14 +44,16 @@ class ActionSheetHelper {
                     ),
                     maxLines: 2,
                   ),
-                  subtitle: Text(
-                    options[i].subtitle ?? ' ',
-                    style: Get.textTheme.bodySmall!.copyWith(
-                      fontWeight: FontWeight.w300,
-                      fontSize: 10.sp,
-                    ),
-                    maxLines: 2,
-                  ),
+                  subtitle: options[i].subtitle == null
+                      ? Text(
+                          options[i].subtitle ?? ' ',
+                          style: Get.textTheme.bodySmall!.copyWith(
+                            fontWeight: FontWeight.w300,
+                            fontSize: 10.sp,
+                          ),
+                          maxLines: 2,
+                        )
+                      : null,
                   trailing:
                       currentValue.toString() == options[i].value.toString()
                           ? Icon(
