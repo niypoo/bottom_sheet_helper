@@ -37,7 +37,7 @@ class BottomSheetPortraitLayout extends StatelessWidget {
         // Body Of Sheet
         Container(
           padding: EdgeInsets.symmetric(vertical: 15.sp , horizontal: 10.sp),
-          color: Colors.amber,
+          color: Colors.transparent,
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15.sp),
