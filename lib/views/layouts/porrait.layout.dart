@@ -30,44 +30,41 @@ class BottomSheetPortraitLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 15.sp, horizontal: 5.sp),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15.sp),
-          color: color ?? Get.theme.scaffoldBackgroundColor,
-        ),
-        padding: EdgeInsets.only(
-          top: 10.sp,
-          right: 10.sp,
-          left: 10.sp,
-          bottom: 5.sp,
-        ),
-        width: double.maxFinite,
-        height: height,
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              // HEADER
-              if (subTitle != null || title != null)
-                BottomSheetHeader(title: title, subTitle: subTitle),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15.sp),
+        color: color ?? Get.theme.scaffoldBackgroundColor,
+      ),
+      padding: EdgeInsets.only(
+        top: 10.sp,
+        right: 10.sp,
+        left: 10.sp,
+        bottom: 5.sp,
+      ),
+      width: double.maxFinite,
+      height: height,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // HEADER
+            if (subTitle != null || title != null)
+              BottomSheetHeader(title: title, subTitle: subTitle),
 
-              // body
-              Flexible(
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    bottom: 5.sp,
-                  ),
-                  child: child,
+            // body
+            Flexible(
+              child: Padding(
+                padding: EdgeInsets.only(
+                  bottom: 5.sp,
                 ),
+                child: child,
               ),
+            ),
 
-              // Footer
-              if (footer != null) footer!
-            ],
-          ),
+            // Footer
+            if (footer != null) footer!
+          ],
         ),
       ),
     );
