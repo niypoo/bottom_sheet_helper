@@ -45,8 +45,8 @@ class BottomSheetPortraitLayout extends StatelessWidget {
             left: 10.sp,
             bottom: 5.sp,
           ),
-          width: context.width * 0.95,
-          margin: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
+          width: context.width - 30.sp,
+          margin: EdgeInsets.symmetric(vertical: 30.sp),
           height: height,
           child: SingleChildScrollView(
             child: Column(
