@@ -46,9 +46,7 @@ class CustomBottomSheetHelper {
       enableDrag: draggable,
       isDismissible: isDismissible,
       useRootNavigator: true,
-      isScrollControlled: true,
-      barrierColor: Colors.transparent,
-      
+      isScrollControlled: true,  
     );
   }
 }

@@ -47,7 +47,7 @@ class BottomSheetPortraitLayout extends StatelessWidget {
               bottom: 5.sp,
             ),
             width: context.width * 0.95,
-            margin: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
+            // margin: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
             height: height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
