@@ -47,6 +47,8 @@ class CustomBottomSheetHelper {
       isDismissible: isDismissible,
       useRootNavigator: true,
       isScrollControlled: true,
+      barrierColor: Colors.transparent,
+      
     );
   }
 }
