@@ -41,8 +41,8 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
           ),
           padding: EdgeInsetsDirectional.only(
             top: 10.sp,
-            start: 25.sp,
-            end: 15.sp,
+            start: 18.sp,
+            end: 18.sp,
           ),
           width: Get.width * 0.65,
           height: Get.height * 0.65,
@@ -87,7 +87,7 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
         if (draggable!)
           Positioned(
             left: 0,
-            top: 0,
+            bottom: 0,
             child: DraggableButton(
               icon: icon,
               color: color,
