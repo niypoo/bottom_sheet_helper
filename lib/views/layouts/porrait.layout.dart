@@ -30,29 +30,25 @@ class BottomSheetPortraitLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Stack(
-        alignment: Alignment.topCenter,
-        children: <Widget>[
-          SizedBox(
-            width: context.width * 0.95,
-            height: height != null ? height! + 50.sp : null,
+    return Stack(
+      alignment: Alignment.topCenter,
+      children: <Widget>[
+        // Body Of Sheet
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.sp),
+            color: color ?? Get.theme.scaffoldBackgroundColor,
           ),
-          // Body Of Sheet
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15.sp),
-              color: color ?? Get.theme.scaffoldBackgroundColor,
-            ),
-            padding: EdgeInsets.only(
-              top: 10.sp,
-              right: 10.sp,
-              left: 10.sp,
-              bottom: 5.sp,
-            ),
-            width: context.width * 0.95,
-            margin: EdgeInsets.only(bottom: context.height * 0.03,),
-            height: height,
+          padding: EdgeInsets.only(
+            top: 10.sp,
+            right: 10.sp,
+            left: 10.sp,
+            bottom: 5.sp,
+          ),
+          width: context.width * 0.95,
+          margin: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
+          height: height,
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
@@ -76,16 +72,16 @@ class BottomSheetPortraitLayout extends StatelessWidget {
               ],
             ),
           ),
+        ),
 
-          // Draggable Button
-          if (draggable!)
-            DraggableButton(
-              icon: icon,
-              color: color,
-              iconColor: iconColor,
-            ),
-        ],
-      ),
+        // Draggable Button
+        if (draggable!)
+          DraggableButton(
+            icon: icon,
+            color: color,
+            iconColor: iconColor,
+          ),
+      ],
     );
   }
 }
