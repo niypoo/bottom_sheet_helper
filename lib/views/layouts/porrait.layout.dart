@@ -34,6 +34,10 @@ class BottomSheetPortraitLayout extends StatelessWidget {
       child: Stack(
         alignment: Alignment.topCenter,
         children: <Widget>[
+          SizedBox(
+            width: context.width * 0.95,
+            height: height != null ? height! + 50.sp : null,
+          ),
           // Body Of Sheet
           Container(
             decoration: BoxDecoration(
@@ -47,7 +51,7 @@ class BottomSheetPortraitLayout extends StatelessWidget {
               bottom: 5.sp,
             ),
             width: context.width * 0.95,
-            // margin: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
+            margin: EdgeInsets.only(bottom: context.height * 0.03,),
             height: height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
