@@ -39,17 +39,17 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.sp),
             color: color ?? Get.theme.scaffoldBackgroundColor,
           ),
-          padding: EdgeInsets.only(
+          padding: EdgeInsetsDirectional.only(
             top: 10.sp,
-            right: 15.sp,
-            left: 15.sp,
+            start: 25.sp,
+            end: 15.sp,
           ),
           width: Get.width * 0.65,
           height: Get.height * 0.65,
-          margin: EdgeInsets.only(
+          margin: EdgeInsetsDirectional.only(
             bottom: 15.sp,
-            left: 18.sp,
-            right: 18.sp,
+            start: 18.sp,
+            end: 18.sp,
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -87,7 +87,7 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
         if (draggable!)
           Positioned(
             left: 0,
-            top: Get.height * 0.06,
+            top: 0,
             child: DraggableButton(
               icon: icon,
               color: color,
@@ -110,7 +110,7 @@ class BottomSheetDividerLandscapeLayout extends StatelessWidget {
       child: SizedBox(
         width: context.isTablet ? (context.height * 0.06) : 10.sp,
         height: context.height * 0.7,
-        child: VerticalDivider(color: Get.theme.cardColor),
+        child: VerticalDivider(color: Get.theme.cardColor, endIndent: 20.sp, indent: 20.sp,),
       ),
     );
   }
