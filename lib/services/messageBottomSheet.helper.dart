@@ -1,6 +1,6 @@
 import 'package:bottom_sheet_helper/services/customBottomSheet.helper.dart';
 import 'package:flutter/material.dart';
-import 'package:fly_ui/views/widgets/buttons/elevatedFlexibleButton.widget.dart';
+import 'package:fly_ui/views/widgets/buttons/elevatedButton.widget.dart';
 import 'package:get/get.dart';
 import 'package:unicons/unicons.dart';
 
@@ -21,7 +21,7 @@ class MessageBottomSheetHelper {
       footer: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FlyElevatedFlexibleButton.close(
+          FlyElevatedButton.close(
             title: 'Close'.tr,
             onPressed: () => Get.back(result: false),
           )
