@@ -1,10 +1,9 @@
 import 'dart:math';
-import 'package:app_configuration_service/appInfo.config.dart';
 import 'package:bottom_sheet_helper/services/customBottomSheet.helper.dart';
 import 'package:flutter/material.dart';
-import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:fly_ui/views/widgets/buttons/elevatedButton.widget.dart';
 import 'package:get/get.dart';
+import 'package:patata_responsive/patata_responsive.dart';
 import 'package:unicons/unicons.dart';
 
 class AdvanceConformationSheetHelper {
@@ -26,9 +25,7 @@ class AdvanceConformationSheetHelper {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(
-                bottom: AppConfigService.to.space!.m,
-              ),
+              padding: EdgeInsets.only(bottom: 8.sp),
               child: TextFieldAdvanceBottomSheet(
                 confirmTextController: confirmTextController,
                 randomNumber: randomNumber,
@@ -76,7 +73,7 @@ class TextFieldAdvanceBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(AppConfigService.to.space!.xs),
+      padding: EdgeInsets.all(4.sp),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.sp),
         border: Border.all(

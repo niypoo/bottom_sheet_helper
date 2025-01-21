@@ -10,11 +10,8 @@ dependencies:
     sdk: flutter
   get: ^4.6.6
   unicons: ^2.1.1
+  patata_responsive: ^0.0.1
 
-  # Inner
-  app_configuration_service:
-    git:
-      url: git@github.com:niypoo/app_configuration_service.git
   fly_ui:
     git:
       url: git@github.com:niypoo/fly_ui.git

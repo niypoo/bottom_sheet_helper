@@ -1,8 +1,8 @@
 import 'package:bottom_sheet_helper/views/widgets/draggableButton.widget.dart';
 import 'package:bottom_sheet_helper/views/widgets/header.widget.dart';
 import 'package:flutter/material.dart';
-import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:get/get.dart';
+import 'package:patata_responsive/patata_responsive.dart';
 
 class BottomSheetLandscapeLayout extends StatelessWidget {
   const BottomSheetLandscapeLayout({
@@ -40,17 +40,17 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
             color: color ?? Get.theme.scaffoldBackgroundColor,
           ),
           padding: EdgeInsets.only(
-            top: 10.sp,
-            right: 15.sp,
-            left: 15.sp,
+            top: 8.sp,
+            right: 12.sp,
+            left: 12.sp,
           ),
           width: Get.width * 0.65,
           height: Get.height * 0.65,
-          margin: EdgeInsets.only(
-            bottom: 15.sp,
-            left: 18.sp,
-            right: 18.sp,
-          ),
+          // margin: EdgeInsets.only(
+          //   bottom: 8.sp,
+          //   left: 12.sp,
+          //   right: 12.sp,
+          // ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,

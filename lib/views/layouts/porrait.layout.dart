@@ -1,8 +1,8 @@
 import 'package:bottom_sheet_helper/views/widgets/header.widget.dart';
 import 'package:flutter/material.dart';
-import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:get/get.dart';
 import 'package:bottom_sheet_helper/views/widgets/draggableButton.widget.dart';
+import 'package:patata_responsive/patata_responsive.dart';
 
 class BottomSheetPortraitLayout extends StatelessWidget {
   const BottomSheetPortraitLayout({
@@ -41,13 +41,13 @@ class BottomSheetPortraitLayout extends StatelessWidget {
               color: color ?? Get.theme.scaffoldBackgroundColor,
             ),
             padding: EdgeInsets.only(
-              top: 10.sp,
-              right: 10.sp,
-              left: 10.sp,
-              bottom: 5.sp,
+              top: 12.sp,
+              right: 12.sp,
+              left: 12.sp,
+              bottom: 8.sp,
             ),
             width: context.width * 0.95,
-            margin: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
+            // margin: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
             height: height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
