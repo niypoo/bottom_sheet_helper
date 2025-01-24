@@ -46,9 +46,9 @@ class BottomSheetPortraitLayout extends StatelessWidget {
                 top: 10.sp,
                 right: 12.sp,
                 left: 12.sp,
-                bottom: 10.sp,
+                // bottom: 10.sp,
               ),
-              width: context.width * 0.95,
+              width: 95.w,
               height: height,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,8 +61,8 @@ class BottomSheetPortraitLayout extends StatelessWidget {
                   // body
                   Flexible(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 15.sp,
+                      padding: EdgeInsets.only(
+                        top: 15.sp,
                       ),
                       child: child,
                     ),

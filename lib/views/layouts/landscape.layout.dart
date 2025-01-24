@@ -34,52 +34,50 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: <Widget>[
         // Body Of Sheet
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15.sp),
-            color: color ?? Get.theme.scaffoldBackgroundColor,
-          ),
-          padding: EdgeInsets.only(
-            top: 8.sp,
-            right: 12.sp,
-            left: 12.sp,
-          ),
-          width: Get.width * 0.65,
-          height: Get.height * 0.65,
-          // margin: EdgeInsets.only(
-          //   bottom: 8.sp,
-          //   left: 12.sp,
-          //   right: 12.sp,
-          // ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      // HEADER
-                      if (subTitle != null || title != null)
-                        BottomSheetHeader(title: title, subTitle: subTitle),
-                      // Footer
-                      if (footer != null) footer!
-                    ],
+        Padding(
+          padding: EdgeInsets.only(top: 20.sp, bottom: 2.5.h),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.sp),
+              color: color ?? Get.theme.scaffoldBackgroundColor,
+            ),
+            padding: EdgeInsets.only(
+              top: 10.sp,
+              right: 12.sp,
+              left: 12.sp,
+            ),
+            width: 65.w,
+            height: 65.h,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        // HEADER
+                        if (subTitle != null || title != null)
+                          BottomSheetHeader(title: title, subTitle: subTitle),
+                        // Footer
+                        if (footer != null) footer!
+                      ],
+                    ),
                   ),
                 ),
-              ),
 
-              // divider
-              const BottomSheetDividerLandscapeLayout(),
+                // divider
+                const BottomSheetDividerLandscapeLayout(),
 
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [child!],
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [child!],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
 
@@ -87,7 +85,7 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
         if (draggable!)
           Positioned(
             left: 0,
-            bottom: Get.height * 0.06,
+            bottom: 6.h,
             child: DraggableButton(
               icon: icon,
               color: color,
@@ -110,7 +108,11 @@ class BottomSheetDividerLandscapeLayout extends StatelessWidget {
       child: SizedBox(
         width: context.isTablet ? (context.height * 0.06) : 10.sp,
         height: context.height * 0.7,
-        child: VerticalDivider(color: Get.theme.cardColor, endIndent: 25.sp, indent: 25.sp,),
+        child: VerticalDivider(
+          color: Get.theme.cardColor,
+          endIndent: 25.sp,
+          indent: 25.sp,
+        ),
       ),
     );
   }
