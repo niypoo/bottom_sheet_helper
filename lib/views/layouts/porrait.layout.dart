@@ -32,7 +32,7 @@ class BottomSheetPortraitLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(bottom: 0.05.h),
+        padding: EdgeInsets.only(bottom: 1.h),
         child: Stack(
           alignment: Alignment.topCenter,
           children: <Widget>[
