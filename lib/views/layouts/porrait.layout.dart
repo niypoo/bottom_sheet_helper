@@ -43,7 +43,7 @@ class BottomSheetPortraitLayout extends StatelessWidget {
                 color: color ?? Get.theme.scaffoldBackgroundColor,
               ),
               padding: EdgeInsets.only(
-                top: 10.sp,
+                top: 12.sp,
                 right: 12.sp,
                 left: 12.sp,
                 // bottom: 10.sp,
