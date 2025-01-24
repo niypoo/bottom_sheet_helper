@@ -1,6 +1,7 @@
 import 'package:bottom_sheet_helper/models/actionSheetOption.model.dart';
 import 'package:bottom_sheet_helper/services/customBottomSheet.helper.dart';
 import 'package:flutter/material.dart';
+import 'package:fly_ui/views/widgets/inkWell.widget.dart';
 import 'package:get/get.dart';
 import 'package:patata_responsive/patata_responsive.dart';
 import 'package:unicons/unicons.dart';
@@ -31,31 +32,48 @@ class ActionSheetHelper {
               physics: const NeverScrollableScrollPhysics(),
               padding: const EdgeInsets.all(0),
               itemBuilder: (c, i) {
-                return ListTile(
-                  minVerticalPadding: 0,
-                  contentPadding: const EdgeInsets.all(0),
+                return FlyInkWell(
                   onTap: () => Get.back(result: options[i].value),
-                  leading: options[i].leading,
-                  title: Text(
-                    options[i].title,
-                    style: Get.textTheme.titleSmall,
-                    maxLines: 2,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      if (options[i].leading != null)
+                        Padding(
+                          padding: EdgeInsetsDirectional.only(end: 5.sp),
+                          child: options[i].leading!,
+                        ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              options[i].title,
+                              style: Get.textTheme.titleSmall,
+                              maxLines: 2,
+                            ),
+                            if (options[i].subtitle != null)
+                              Text(
+                                options[i].subtitle!,
+                                style: Get.textTheme.bodySmall,
+                                maxLines: 2,
+                              )
+                          ],
+                        ),
+                      ),
+                      if (currentValue.toString() ==
+                          options[i].value.toString())
+                        Padding(
+                          padding: EdgeInsetsDirectional.only(start: 5.sp),
+                          child: Icon(
+                            UniconsLine.check,
+                            color: Get.theme.primaryColor,
+                            size: 22.sp,
+                          ),
+                        ),
+                    ],
                   ),
-                  subtitle: options[i].subtitle != null
-                      ? Text(
-                          options[i].subtitle ?? ' ',
-                          style: Get.textTheme.bodySmall,
-                          maxLines: 2,
-                        )
-                      : null,
-                  trailing:
-                      currentValue.toString() == options[i].value.toString()
-                          ? Icon(
-                              UniconsLine.check,
-                              color: Get.theme.primaryColor,
-                              size: 22.sp,
-                            )
-                          : null,
                 );
               },
               separatorBuilder: (c, i) => i == options.length
