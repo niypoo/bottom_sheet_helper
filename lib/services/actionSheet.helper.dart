@@ -29,8 +29,11 @@ class ActionSheetHelper {
           : ListView.separated(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
+              padding: const EdgeInsets.all(0),
               itemBuilder: (c, i) {
                 return ListTile(
+                  minVerticalPadding: 0,
+                  contentPadding: const EdgeInsets.all(0),
                   onTap: () => Get.back(result: options[i].value),
                   leading: options[i].leading,
                   title: Text(
