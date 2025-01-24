@@ -31,19 +31,19 @@ class BottomSheetPortraitLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.only(bottom: context.height * 0.03, top: 30),
-        child: Stack(
-          alignment: Alignment.topCenter,
-          children: <Widget>[
-            // Body Of Sheet
-            Container(
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: <Widget>[
+          // Body Of Sheet
+          Padding(
+            padding: EdgeInsets.only(bottom: 0.05.h, top: 35.sp),
+            child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.sp),
                 color: color ?? Get.theme.scaffoldBackgroundColor,
               ),
               padding: EdgeInsets.only(
-                top: 12.sp,
+                top: 5.sp,
                 right: 12.sp,
                 left: 12.sp,
                 bottom: 8.sp,
@@ -73,16 +73,16 @@ class BottomSheetPortraitLayout extends StatelessWidget {
                 ],
               ),
             ),
+          ),
 
-            // Draggable Button
-            if (draggable!)
-              DraggableButton(
-                icon: icon,
-                color: color,
-                iconColor: iconColor,
-              ),
-          ],
-        ),
+          // Draggable Button
+          if (draggable!)
+            DraggableButton(
+              icon: icon,
+              color: color,
+              iconColor: iconColor,
+            ),
+        ],
       ),
     );
   }

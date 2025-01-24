@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:patata_responsive/patata_responsive.dart';
 import 'package:unicons/unicons.dart';
 
 class DraggableButton extends StatelessWidget {
@@ -17,19 +18,19 @@ class DraggableButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(30),
       onTap: Get.back,
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: color ?? Get.theme.scaffoldBackgroundColor,
         ),
-        height: 60,
-        width: 60,
+        height: 60.sp,
+        width: 60.sp,
         child: Icon(
           icon ?? UniconsLine.angle_down,
           color: iconColor ?? Get.theme.iconTheme.color,
-          size: 30,
+          size: 30.sp,
         ),
       ),
     );
