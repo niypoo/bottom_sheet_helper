@@ -85,7 +85,7 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
         if (draggable!)
           Positioned(
             left: 0,
-            bottom: 6.h,
+            bottom: 6.w,
             child: DraggableButton(
               icon: icon,
               color: color,
