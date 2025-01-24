@@ -31,61 +31,58 @@ class BottomSheetPortraitLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.only(bottom: 1.h),
-        child: Stack(
-          alignment: Alignment.topCenter,
-          children: <Widget>[
-            // Body Of Sheet
-            Padding(
-              padding: EdgeInsets.only(top: 20.sp),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.sp),
-                  color: color ?? Get.theme.scaffoldBackgroundColor,
-                ),
-                padding: EdgeInsets.only(
-                  top: 10.sp,
-                  right: 12.sp,
-                  left: 12.sp,
-                  bottom: 10.sp,
-                ),
-                width: context.width * 0.95,
-                height: height,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    // HEADER
-                    if (subTitle != null || title != null)
-                      BottomSheetHeader(title: title, subTitle: subTitle),
-        
-                    // body
-                    Flexible(
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 15.sp,
-                        ),
-                        child: child,
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: <Widget>[
+          // Body Of Sheet
+          Padding(
+            padding: EdgeInsets.only(top: 20.sp, bottom: 2.5.h),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.sp),
+                color: color ?? Get.theme.scaffoldBackgroundColor,
+              ),
+              padding: EdgeInsets.only(
+                top: 10.sp,
+                right: 12.sp,
+                left: 12.sp,
+                bottom: 10.sp,
+              ),
+              width: context.width * 0.95,
+              height: height,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // HEADER
+                  if (subTitle != null || title != null)
+                    BottomSheetHeader(title: title, subTitle: subTitle),
+
+                  // body
+                  Flexible(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 15.sp,
                       ),
+                      child: child,
                     ),
-        
-                    // Footer
-                    if (footer != null) footer!
-                  ],
-                ),
+                  ),
+
+                  // Footer
+                  if (footer != null) footer!
+                ],
               ),
             ),
-        
-            // Draggable Button
-            if (draggable!)
-              DraggableButton(
-                icon: icon,
-                color: color,
-                iconColor: iconColor,
-              ),
-          ],
-        ),
+          ),
+
+          // Draggable Button
+          if (draggable!)
+            DraggableButton(
+              icon: icon,
+              color: color,
+              iconColor: iconColor,
+            ),
+        ],
       ),
     );
   }
