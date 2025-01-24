@@ -35,7 +35,7 @@ class BottomSheetLandscapeLayout extends StatelessWidget {
       children: <Widget>[
         // Body Of Sheet
         Padding(
-          padding: EdgeInsets.only(left: 20.sp, right: 20.sp, bottom: 3.h ),
+          padding: EdgeInsets.only(left: 15.sp, right: 15.sp, bottom: 3.w ),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15.sp),
