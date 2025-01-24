@@ -34,7 +34,7 @@ class ActionSheetHelper {
                   minVerticalPadding: 0,
                   contentPadding: const EdgeInsets.all(0),
                   onTap: () => Get.back(result: options[i].value),
-                  leading: options[i].leading,
+                  // leading: options[i].leading,
                   title: Text(
                     options[i].title,
                     style: Get.textTheme.titleSmall,
@@ -52,7 +52,7 @@ class ActionSheetHelper {
                           ? Icon(
                               UniconsLine.check,
                               color: Get.theme.primaryColor,
-                              size: 30.sp,
+                              size: 20.sp,
                             )
                           : null,
                 );
