@@ -38,19 +38,13 @@ class ActionSheetHelper {
                   leading: options[i].leading,
                   title: Text(
                     options[i].title,
-                    style: Get.textTheme.labelMedium!.copyWith(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 11.sp,
-                    ),
+                    style: Get.textTheme.titleSmall,
                     maxLines: 2,
                   ),
                   subtitle: options[i].subtitle != null
                       ? Text(
                           options[i].subtitle ?? ' ',
-                          style: Get.textTheme.bodySmall!.copyWith(
-                            fontWeight: FontWeight.w300,
-                            fontSize: 10.sp,
-                          ),
+                          style: Get.textTheme.bodySmall,
                           maxLines: 2,
                         )
                       : null,
@@ -59,7 +53,6 @@ class ActionSheetHelper {
                           ? Icon(
                               UniconsLine.check,
                               color: Get.theme.primaryColor,
-                              size: 22.sp,
                             )
                           : null,
                 );

@@ -27,17 +27,14 @@ class BottomSheetHeader extends StatelessWidget {
           if (title != null)
             Text(
               title!.toUpperCase(),
-              style: Get.textTheme.titleLarge,
+              style: Get.textTheme.titleMedium,
               textAlign: TextAlign.start,
             ),
           if (subTitle != null)
-            Padding(
-              padding: EdgeInsets.only(top: AppConfigService.to.space!.s),
-              child: Text(
-                subTitle!,
-                style: Get.textTheme.bodyMedium,
-                textAlign: TextAlign.start,
-              ),
+            Text(
+              subTitle!,
+              style: Get.textTheme.bodyMedium,
+              textAlign: TextAlign.start,
             ),
         ],
       ),
