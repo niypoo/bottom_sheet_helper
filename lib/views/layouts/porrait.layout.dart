@@ -64,7 +64,7 @@ class BottomSheetPortraitLayout extends StatelessWidget {
                     Flexible(
                       child: Padding(
                         padding: EdgeInsets.only(
-                          bottom: 5.sp,
+                          bottom: 15.sp,
                         ),
                         child: child,
                       ),
