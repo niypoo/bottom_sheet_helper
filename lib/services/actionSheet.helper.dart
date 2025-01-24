@@ -30,31 +30,11 @@ class ActionSheetHelper {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (c, i) {
-                return ListTile(
-                  minVerticalPadding: 0,
-                  contentPadding: const EdgeInsets.all(0),
-                  onTap: () => Get.back(result: options[i].value),
-                  leading: options[i].leading,
-                  title: Text(
+                return Text(
                     options[i].title,
                     style: Get.textTheme.titleSmall,
                     maxLines: 2,
-                  ),
-                  subtitle: options[i].subtitle != null
-                      ? Text(
-                          options[i].subtitle ?? ' ',
-                          style: Get.textTheme.bodySmall,
-                          maxLines: 2,
-                        )
-                      : null,
-                  trailing:
-                      currentValue.toString() == options[i].value.toString()
-                          ? Icon(
-                              UniconsLine.check,
-                              color: Get.theme.primaryColor,
-                            )
-                          : null,
-                );
+                  );
               },
               separatorBuilder: (c, i) => i == options.length
                   ? const SizedBox.shrink()
