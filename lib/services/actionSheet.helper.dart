@@ -30,7 +30,7 @@ class ActionSheetHelper {
           : ListView.separated(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              padding: const EdgeInsets.all(0),
+              padding: EdgeInsetsDirectional.only(start: 8.sp),
               itemBuilder: (c, i) {
                 return FlyInkWell(
                   onTap: () => Get.back(result: options[i].value),
@@ -45,7 +45,7 @@ class ActionSheetHelper {
                         ),
                       Expanded(
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
