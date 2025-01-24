@@ -38,17 +38,17 @@ class BottomSheetPortraitLayout extends StatelessWidget {
           children: <Widget>[
             // Body Of Sheet
             Padding(
-              padding: EdgeInsets.only(top: 15.sp),
+              padding: EdgeInsets.only(top: 20.sp),
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.sp),
                   color: color ?? Get.theme.scaffoldBackgroundColor,
                 ),
                 padding: EdgeInsets.only(
-                  top: 5.sp,
+                  top: 10.sp,
                   right: 12.sp,
                   left: 12.sp,
-                  bottom: 8.sp,
+                  bottom: 10.sp,
                 ),
                 width: context.width * 0.95,
                 height: height,
