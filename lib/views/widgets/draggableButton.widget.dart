@@ -18,19 +18,19 @@ class DraggableButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      borderRadius: BorderRadius.circular(30),
+      borderRadius: BorderRadius.circular(22.sp),
       onTap: Get.back,
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: color ?? Get.theme.scaffoldBackgroundColor,
         ),
-        height: 40.sp,
-        width: 40.sp,
+        height: 45.sp,
+        width: 45.sp,
         child: Icon(
           icon ?? UniconsLine.angle_down,
           color: iconColor ?? Get.theme.iconTheme.color,
-          size: 30.sp,
+          size: 25.sp,
         ),
       ),
     );
