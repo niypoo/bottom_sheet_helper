@@ -25,12 +25,12 @@ class DraggableButton extends StatelessWidget {
           shape: BoxShape.circle,
           color: color ?? Get.theme.scaffoldBackgroundColor,
         ),
-        height: 45.sp,
-        width: 45.sp,
+        height: 35.sp,
+        width: 35.sp,
         child: Icon(
           icon ?? UniconsLine.angle_down,
           color: iconColor ?? Get.theme.iconTheme.color,
-          size: 25.sp,
+          size: 20.sp,
         ),
       ),
     );
