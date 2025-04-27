@@ -1,8 +1,8 @@
 import 'package:bottom_sheet_helper/models/actionSheetOption.model.dart';
 import 'package:bottom_sheet_helper/services/customBottomSheet.helper.dart';
 import 'package:flutter/material.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:get/get.dart';
-import 'package:patata_responsive/patata_responsive.dart';
 import 'package:unicons/unicons.dart';
 
 class ActionSheetHelper {
