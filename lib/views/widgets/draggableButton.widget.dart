@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:patata_responsive/patata_responsive.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:unicons/unicons.dart';
 
 class DraggableButton extends StatelessWidget {
@@ -25,12 +25,12 @@ class DraggableButton extends StatelessWidget {
           shape: BoxShape.circle,
           color: color ?? Get.theme.scaffoldBackgroundColor,
         ),
-        height: 30.sp,
-        width: 30.sp,
+        height: 40.sp,
+        width: 40.sp,
         child: Icon(
           icon ?? UniconsLine.angle_down,
           color: iconColor ?? Get.theme.iconTheme.color,
-          size: 22.sp,
+          size: 28.sp,
         ),
       ),
     );

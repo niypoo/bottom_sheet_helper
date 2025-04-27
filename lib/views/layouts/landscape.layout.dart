@@ -2,7 +2,7 @@ import 'package:bottom_sheet_helper/views/widgets/draggableButton.widget.dart';
 import 'package:bottom_sheet_helper/views/widgets/header.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:patata_responsive/patata_responsive.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 
 class BottomSheetLandscapeLayout extends StatelessWidget {
   const BottomSheetLandscapeLayout({

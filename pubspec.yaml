@@ -10,7 +10,6 @@ dependencies:
     sdk: flutter
   get: ^4.6.6
   unicons: ^2.1.1
-  patata_responsive: ^0.0.1
 
   fly_ui:
     git:
