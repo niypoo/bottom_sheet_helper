@@ -1,6 +1,6 @@
-import 'package:app_configuration_service/appInfo.config.dart';
 import 'package:bottom_sheet_helper/services/customBottomSheet.helper.dart';
 import 'package:flutter/material.dart';
+import 'package:fly_ui/extensions/responsive.extension.dart';
 import 'package:fly_ui/views/widgets/buttons/elevatedButton.widget.dart';
 import 'package:get/get.dart';
 import 'package:unicons/unicons.dart';
@@ -20,8 +20,9 @@ class ConformationSheetHelper {
       icon: icon,
       child: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppConfigService.to.space!.m),
-          child: Column(
+          padding: EdgeInsets.all(10.sp),
+          child: Wrap(
+            spacing: 5.sp,
             children: [
               FlyElevatedButton.primary(
                 title: yesTitle ?? 'Yes'.tr,
