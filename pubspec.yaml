@@ -9,7 +9,6 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.6
-  unicons: ^2.1.1
 
   fly_ui:
     git:
